@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1668040542 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoriafatec\monitoria\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+
+1668077480 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+
