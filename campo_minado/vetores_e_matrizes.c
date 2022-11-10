@@ -18,8 +18,8 @@
 
 
 int main(void){
-    char matriz[20][20];
-    matriz[10][0] = 'a';
+    char matriz[1][0];
+    matriz[1][0] = 'a';
 
     return 0;
 }

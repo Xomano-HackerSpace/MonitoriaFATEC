@@ -12,14 +12,14 @@ void gotoxy(int x,int y)//Função para forçar uma posição para impressão de texto
     COORD c; //Variavel de coordenada, lib windows https://learn.microsoft.com/pt-br/windows/console/coord-str
     c.X = x;
     c.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),c);//transporta o prompt para a posição da coord.
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),c);//transporta o prompt para a posição da coord do cmd.
 }
-int main(){
+int main2(){
     setlocale(LC_ALL,""); //Método para evitar setar o locale de acordo com o locale do ambiente.
-    srand(time(NULL)); //função que previne o rand de repetir a seed.
+    srand(time(NULL)); //função que previne o rand de repetir a seed retirando as informações de hora do sistema de criação randomica.
     char campominado[5][5],cminado[5][5];
     int linha,coluna,i,j,k,flag=50,minas=5,nivel,jogada;
-    for(i=0;i<5;i++)/*//criação do tabuleiro que aparece na tela*/
+    for(i=0;i<5;i++)
         for(j=0;j<5;j++)
             campominado[i][j]=0;
 
