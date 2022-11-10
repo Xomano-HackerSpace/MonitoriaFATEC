@@ -18,30 +18,10 @@ int main(){
     setlocale(LC_ALL,""); //Método para evitar setar o locale de acordo com o locale do ambiente.
     srand(time(NULL)); //função que previne o rand de repetir a seed.
     char campominado[5][5],cminado[5][5];
-    int linha,coluna,i,j,k,flag=50,minas,nivel,jogada;
-    printf("\n\n---------------------BEM VINDO AO CAMPO MINADO 2.0---------------------");/*//Criação do menu*/
-    printf("\n\nEscolha um nível de dificuldade:\n\n(1) - fácil \n(2) - difícil \n(3) - Impossível: \n\n     -%c ",16);
-    do{
-        scanf("%d",&nivel);
-    }while(nivel <1 || nivel > 3);
+    int linha,coluna,i,j,k,flag=50,minas=5,nivel,jogada;
     for(i=0;i<5;i++)/*//criação do tabuleiro que aparece na tela*/
         for(j=0;j<5;j++)
             campominado[i][j]=0;
-
-    if(nivel==1){
-        printf("\n\nNeste nivel ha 5 minas no tabuleiro,boa sorte!     tecle ");
-        minas=5;
-    }
-    else{
-        if(nivel==2){
-            printf("\n\nNeste nivel ha 12 minas no tabuleiro,boa sorte!     tecle ");
-            minas = 12;
-        }
-        else{
-            printf("\n\nNeste nivel ha 24 minas no tabuleiro,boa sorte!     tecle ");
-            minas = 24;
-        }
-    }
 
     for(linha=0;linha<minas;linha++)
         campominado[rand()%5][rand()%5] = '*'; /*https://www.tutorialspoint.com/c_standard_library/c_function_rand.htm*/
