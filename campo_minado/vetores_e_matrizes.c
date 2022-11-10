@@ -17,9 +17,9 @@
 */
 
 
-int main(void){
-    char matriz[1][0];
-    matriz[1][0] = 'a';
+int main2(void){
+    char matriz[0][0];
+    matriz[8][1] = 'F';
 
     return 0;
 }
