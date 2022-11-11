@@ -17,9 +17,12 @@
 */
 
 
-int main2(void){
-    char matriz[0][0];
-    matriz[8][1] = 'F';
+int main6(void){
+    char matriz[2][4] = {1,2,3,4,5,6,7,8};
+
+    char vetor[8] = {1,2,3,4,5,6,7,8};
+    printf(vetor);
+    printf(matriz);
 
     return 0;
 }

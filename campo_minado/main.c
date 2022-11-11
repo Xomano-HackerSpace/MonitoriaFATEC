@@ -8,7 +8,7 @@
 /*fonte https://www.clubedohardware.com.br/forums/topic/1290480-campo-minado-em-c/*/
 
 char campominado[20][20];
-int cont,linha,coluna,i,j,k,flag,minas=100,jogada,acertos=0; //Declaramos todas as variáveis que iremos usar... 100 bombas = totalmatriz * 25%
+int cont,linha,coluna,i,j,k,flag,minas=100,jogada,acertos=0,cont=0; //Declaramos todas as variáveis que iremos usar... 100 bombas = totalmatriz * 25%
 
 void gotoxy(int x,int y)//Função para forçar uma posição para impressão de texto
 {
@@ -25,8 +25,14 @@ int main(){
         for(j=0;j<20;j++)
             campominado[i][j]=0;
 
-    for(cont=0;cont<minas;cont++)
-        campominado[rand()%20][rand()%20] = 'B'; //Função que atribui as bombas as posições da matriz, aleatóriamente.
+    do {
+        int l = rand()%20;
+        int c = rand()%20;
+        if(campominado[l][c] != 'B'){
+            campominado[l][c] = 'B'; //Função que atribui as bombas as posições da matriz, aleatóriamente.
+            cont+=1;
+        }
+    } while (cont!=100);
 
 
     system("cls");
