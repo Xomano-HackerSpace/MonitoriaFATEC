@@ -5,20 +5,18 @@
 #include<string.h>
 #include <locale.h>
 #include <windows.h>
-/*fonte https://www.clubedohardware.com.br/forums/topic/1290480-campo-minado-em-c/*/
 
 char campominado[20][20];
 int cont,linha,coluna,i,j,k,flag,minas=100,jogada,acertos=0,cont=0; //Declaramos todas as variáveis que iremos usar... 100 bombas = totalmatriz * 25%
 
-void gotoxy(int x,int y)//Função para forçar uma posição para impressão de texto
+void gotoxy(int x,int y)
 {
-    COORD c; //Variavel de coordenada, lib windows https://learn.microsoft.com/pt-br/windows/console/coord-str
-    c.X = x;
+    COORD c;
     c.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),c);//transporta o prompt para a posição da coord do cmd.
 }
 
-int main3(){
+int main(){
     setlocale(LC_ALL,""); //Método para evitar setar o locale de acordo com o locale do ambiente.
     srand(time(NULL)); //função que previne o rand de repetir a seed retirando as informações de hora do sistema de criação randomica.
     for(i=0;i<20;i++)
@@ -113,7 +111,7 @@ int main3(){
 void imprimematriz(){
 
     for(i=0;i<20;i++){                /* quantidade de linhas */
-            k=13;                        /* primeira posição */
+            k=13;                  /* primeira posição */
             for(j=0;j<20;j++){            /* quantidade de colunas */
                 if(campominado[i][j] !='B')/* verifica se nessa posição não eh mina */
                 {

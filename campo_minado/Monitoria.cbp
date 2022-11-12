@@ -42,7 +42,7 @@
 		<Unit filename="cpm.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="main2.c">
+		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="obj/Debug/main.o" />
