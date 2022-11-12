@@ -5,13 +5,12 @@
 #include<string.h>
 #include <locale.h>
 #include <windows.h>
-
 char campominado[20][20];
 int cont,linha,coluna,i,j,k,flag,minas=100,jogada,acertos=0,cont=0; //Declaramos todas as variáveis que iremos usar... 100 bombas = totalmatriz * 25%
-
-void gotoxy(int x,int y)
+void gotoxy(int x,int y)//Função para forçar uma posição para impressão de texto
 {
-    COORD c;
+    COORD c; //Variavel de coordenada, lib windows https://learn.microsoft.com/pt-br/windows/console/coord-str
+    c.X = x;
     c.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),c);//transporta o prompt para a posição da coord do cmd.
 }
@@ -22,7 +21,6 @@ int main(){
     for(i=0;i<20;i++)
         for(j=0;j<20;j++)
             campominado[i][j]=0;
-
     do {
         int l = rand()%20;
         int c = rand()%20;
@@ -31,8 +29,6 @@ int main(){
             cont+=1;
         }
     } while (cont!=100);
-
-
     system("cls");
     printf("Colunas\n             0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19\n");
     printf("Linha 0 ->     |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   \n");
@@ -74,9 +70,6 @@ int main(){
     printf("Linha 18->     |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   \n");
     printf("            ---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---\n");
     printf("Linha 19->     |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   \n");
-
-
-
     for(jogada=1;jogada<300;jogada++){ //Como são 100 bombas, o usuario precisa acertar 300 jogadas para ganhar...
         do{
             gotoxy(5,44);
@@ -107,11 +100,9 @@ int main(){
     getch();
     return 0;
 }
-
 void imprimematriz(){
-
     for(i=0;i<20;i++){                /* quantidade de linhas */
-            k=13;                  /* primeira posição */
+            k=13;                        /* primeira posição */
             for(j=0;j<20;j++){            /* quantidade de colunas */
                 if(campominado[i][j] !='B')/* verifica se nessa posição não eh mina */
                 {
@@ -122,15 +113,13 @@ void imprimematriz(){
             }
         }
 }
-
 void imprimebomba(){
-
-    for(i=0;i<20;i++){                /* quantidade de linhas */
-            k=13;                        /* primeira posição */
-            for(j=0;j<20;j++){            /* quantidade de colunas */
-                gotoxy(k,i*2+2);      /* coloca o cursor nessa posição */
-                printf("%c",campominado[i][j]);/* imprime o que está nessa posição */
-                k+=4;                     /* vai para a proxima posição no desenho na tela */
+    for(i=0;i<20;i++){                
+            k=13;                        
+            for(j=0;j<20;j++){            
+                gotoxy(k,i*2+2);      
+                printf("%c",campominado[i][j]);
+                k+=4;                     
             }
         }
 }
