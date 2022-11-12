@@ -31,9 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="../.gitignore" />
+		<Unit filename="../LICENSE" />
+		<Unit filename="../forca/jogo_forca.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Monitoria.depend" />
+		<Unit filename="Monitoria.layout" />
+		<Unit filename="bin/Debug/Monitoria.exe" />
+		<Unit filename="cpm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="obj/Debug/main.o" />
+		<Unit filename="obj/Debug/vetores_e_matrizes.o" />
 		<Unit filename="vetores_e_matrizes.c">
 			<Option compilerVar="CC" />
 		</Unit>

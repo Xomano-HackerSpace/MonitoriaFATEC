@@ -18,7 +18,7 @@ void gotoxy(int x,int y)//Função para forçar uma posição para impressão de texto
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),c);//transporta o prompt para a posição da coord do cmd.
 }
 
-int main(){
+int main3(){
     setlocale(LC_ALL,""); //Método para evitar setar o locale de acordo com o locale do ambiente.
     srand(time(NULL)); //função que previne o rand de repetir a seed retirando as informações de hora do sistema de criação randomica.
     for(i=0;i<20;i++)

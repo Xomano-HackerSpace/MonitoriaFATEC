@@ -17,7 +17,7 @@
 	<locale.h>
 	<windows.h>
 
-1668127607 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\campo_minado\main.c
+1668277079 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\campo_minado\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -29,4 +29,23 @@
 1668126640 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\campo_minado\vetores_e_matrizes.c
 	<stdio.h>
 	<stdlib.h>
+
+1668090528 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\forca\jogo_forca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1668276734 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\campo_minado\cpm.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1668277079 source:c:\users\gabriel.gontijo\desktop\notes\projects\monitoria\campo_minado\main2.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
 
